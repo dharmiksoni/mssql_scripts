@@ -1,3 +1,6 @@
+
+/**
+Raw data for department and designation with id's
 5
 1	Staff
 2	Senior Staff
@@ -72,14 +75,9 @@
 8	Research
 9	Customer Service
 
-INSERT INTO designation(designation_name) VALUES('Staff')
-INSERT INTO designation(designation_name) VALUES('Senior Staff')
-INSERT INTO designation(designation_name) VALUES('Assistant Engineer')
-INSERT INTO designation(designation_name) VALUES('Engineer')
-INSERT INTO designation(designation_name) VALUES('Senior Engineer')
-INSERT INTO designation(designation_name) VALUES('Technique Leader')
-INSERT INTO designation(designation_name) VALUES('Manager')
+*/
 
+--departments
 INSERT INTO departments(dept_name) VALUES('Marketing')
 INSERT INTO departments(dept_name) VALUES('Finance')
 INSERT INTO departments(dept_name) VALUES('Human Resources')
@@ -91,8 +89,71 @@ INSERT INTO departments(dept_name) VALUES('Research')
 INSERT INTO departments(dept_name) VALUES('Customer Service')
 
 
+--designation
+INSERT INTO designation(designation_name) VALUES('Staff')
+INSERT INTO designation(designation_name) VALUES('Senior Staff')
+INSERT INTO designation(designation_name) VALUES('Assistant Engineer')
+INSERT INTO designation(designation_name) VALUES('Engineer')
+INSERT INTO designation(designation_name) VALUES('Senior Engineer')
+INSERT INTO designation(designation_name) VALUES('Technique Leader')
+INSERT INTO designation(designation_name) VALUES('Manager')
 
-INSERT INTO `employees` (birth_date, first_name, last_name, email, gender, department_id, hired_on)
+INSERT INTO designation(designation_name) VALUES('Marketing Manager')
+INSERT INTO designation(designation_name) VALUES('Brand Manager')
+INSERT INTO designation(designation_name) VALUES('SEO Specialist')
+INSERT INTO designation(designation_name) VALUES('Email Marketing Specialist')
+INSERT INTO designation(designation_name) VALUES('Graphic Designer')
+INSERT INTO designation(designation_name) VALUES('Copywriter')
+INSERT INTO designation(designation_name) VALUES('Market Research Analyst')
+
+
+INSERT INTO designation(designation_name) VALUES('Chief Financial Officer')
+INSERT INTO designation(designation_name) VALUES('Financial Analyst')
+INSERT INTO designation(designation_name) VALUES('Accountant')
+INSERT INTO designation(designation_name) VALUES('Compliance Officer')
+INSERT INTO designation(designation_name) VALUES('Internal Auditor')
+
+
+INSERT INTO designation(designation_name) VALUES('Human Resources Manager')
+INSERT INTO designation(designation_name) VALUES('Talent Acquisition Specialist')
+INSERT INTO designation(designation_name) VALUES('Employee Relations Specialist')
+INSERT INTO designation(designation_name) VALUES('HR Analyst')
+INSERT INTO designation(designation_name) VALUES('HR Director')
+INSERT INTO designation(designation_name) VALUES('HR Consultant')
+
+
+INSERT INTO designation(designation_name) VALUES('Production Manager')
+INSERT INTO designation(designation_name) VALUES('Production Supervisor')
+INSERT INTO designation(designation_name) VALUES('Quality Control Inspector')
+INSERT INTO designation(designation_name) VALUES('Manufacturing Engineer')
+INSERT INTO designation(designation_name) VALUES('Inventory Controller')
+INSERT INTO designation(designation_name) VALUES('Packaging Operator')
+
+INSERT INTO designation(designation_name) VALUES('Quality Manager')
+INSERT INTO designation(designation_name) VALUES('Quality Engineer')
+
+
+INSERT INTO designation(designation_name) VALUES('Sales Quality Manager')
+INSERT INTO designation(designation_name) VALUES('Customer Experience Specialist')
+INSERT INTO designation(designation_name) VALUES('Sales Operations Analyst')
+INSERT INTO designation(designation_name) VALUES('Sales Operations Analyst')
+
+INSERT INTO designation(designation_name) VALUES('Research Assistant')
+
+INSERT INTO designation(designation_name) VALUES('Research Analyst')
+INSERT INTO designation(designation_name) VALUES('Data Scientist')
+INSERT INTO designation(designation_name) VALUES('Principal Investigator')
+INSERT INTO designation(designation_name) VALUES('Research Consultant')
+
+
+INSERT INTO designation(designation_name) VALUES('Customer Support Specialist')
+INSERT INTO designation(designation_name) VALUES('Customer Service Manager')
+INSERT INTO designation(designation_name) VALUES('Call Center Agent')
+INSERT INTO designation(designation_name) VALUES('Customer Success Manager')
+
+
+--employees
+INSERT INTO dbo.employees (birth_date, first_name, last_name, email, gender, department_id, hired_on)
 VALUES ('1953-09-02','Georgi','Facello','georgi.facello@gmail.com','M',2,'1986-06-26'),
 ('1964-06-02','Bezalel','Simmel','Bezalel.Simmel@gmail.com','F',2,'1985-11-21'),
 ('1959-12-03','Parto','Bamford','Parto.Bamford@gmail.com','M',1,'1986-08-28'),
@@ -123,25 +184,36 @@ VALUES ('1953-09-02','Georgi','Facello','georgi.facello@gmail.com','M',2,'1986-0
 ('1963-11-26','Domenick','Tempesti','Domenick.Tempesti@gmail.com','M',9,'1991-10-22'),
 ('1956-12-13','Otmar','Herbst','Otmar.Herbst@gmail.com','M',9,'1985-11-20')
 
+--emp_designtation
+INSERT INTO dbo.emp_designation(emp_no, designation_id, from_date, to_date)
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (2,16,'1986-06-26','9999-01-01')
 
-INSERT INTO `dept_emp` ()
-VALUES (10001,'d005','1986-06-26','9999-01-01'),
-(10002,'d007','1996-08-03','9999-01-01'),
-(10003,'d004','1995-12-03','9999-01-01'),
-(10004,'d004','1986-12-01','9999-01-01'),
-(10005,'d003','1989-09-12','9999-01-01'),
-(10006,'d005','1990-08-05','9999-01-01'),
-(10007,'d008','1989-02-10','9999-01-01'),
-(10008,'d005','1998-03-11','2000-07-31'),
-(10009,'d006','1985-02-18','9999-01-01'),
-(10010,'d004','1996-11-24','2000-06-26'),
-(10010,'d006','2000-06-26','9999-01-01'),
-(10011,'d009','1990-01-22','1996-11-09'),
-(10012,'d005','1992-12-18','9999-01-01'),
-(10013,'d003','1985-10-20','9999-01-01'),
-(10014,'d005','1993-12-29','9999-01-01'),
-(10015,'d008','1992-09-19','1993-08-22'),
-(10016,'d007','1998-02-11','9999-01-01'),
-(10017,'d001','1993-08-03','9999-01-01'),
-(10018,'d004','1992-07-29','9999-01-01'),
-(10018,'d005','1987-04-03','1992-07-29'),
+VALUES (3,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
+VALUES (1,15,'1986-06-26','9999-01-01')
