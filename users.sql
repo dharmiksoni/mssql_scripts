@@ -7,7 +7,7 @@ USE employee_book;
 --create user
 CREATE LOGIN [DSONI-LAP\PrimeSoft] FROM WINDOWS;
 
-CREATE LOGIN PrimeSoftLogin WITH PASSWORD = 'dSoni@1234567';
+CREATE LOGIN PrimeSoftLogin WITH PASSWORD = '***********';
 
 --permission
 --assign permission
