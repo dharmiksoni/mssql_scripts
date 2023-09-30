@@ -1,3 +1,4 @@
+-- Query - 2
 --write a SQL query to compute the experience of all the managers. Return employee ID, employee name, job name, joining date, and experience
 
 -- solution 1 - INNER join using 
@@ -12,6 +13,7 @@ INNER JOIN dept_manager dm ON e.id = dm.emp_no
 WHERE e.id IS NOT NULL
 ORDER BY e.id;
 
+-- Query - 3
 -- write a SQL query to find those departments where no employee works. Return department ID
 -- solution 1 - using RIGHT JOIN
 SELECT
@@ -28,7 +30,7 @@ FROM employees e WITH (NOLOCK)
 LEFT JOIN departments d WITH (NOLOCK) ON d.id= e.department_id
 WHERE e.department_id IS NULL;
 
-
+-- Query - 5
 --Write a SQL query to find the highest salary employees in each department
 
 -- solution : 1 - using join
@@ -56,7 +58,7 @@ JOIN salaries s ON e.id = s.emp_no
 JOIN departments d ON e.department_id = d.id
 GROUP BY e.id, e.first_name, e.last_name, d.dept_name;
 
--- solution : 3 - using cte
+-- solution : 3 - using CTE
 WITH MaxSalaries AS (
     SELECT
         emp_no,
